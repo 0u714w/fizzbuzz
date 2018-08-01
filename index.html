@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fizzbuzz</title>
+</head>
+
+<body>
+    <h1>Fizzbuzz</h1>
+    <script>
+        i = 0
+        while (i <= 1000) {
+            if (i % 3 == 0) {
+                let num = " " + i + " "
+                document.write(num.fontcolor("red"))
+            } else
+            if (i % 2 == 0) {
+                let num = " " + i + " "
+                document.write(num.bold())
+
+
+                document.write(" ");
+            } else if (i % 2 != 0) {
+                let num = " " + i + " "
+                document.write(num)
+
+            }
+            i++
+
+        }
+    </script>
+
+</body>
+
+</html>
