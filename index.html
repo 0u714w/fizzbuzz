@@ -5,14 +5,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Fizzbuzz</title>
+    <style>
+        .border {
+            border-style: solid;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Fizzbuzz</h1>
     <script>
-        i = 0
+        function isPrime(num) {
+            var sqrtnum = Math.floor(Math.sqrt(num));
+            var prime = num != 1;
+            for (var i = 2; i < sqrtnum + 1; i++) {
+                if (num % i == 0) {
+                    prime = false;
+                    break;
+                }
+            }
+            return prime;
+        }
+
+
+        i = 1
         while (i <= 1000) {
-            if (i % 3 == 0) {
+            if (isPrime(i)) {
+                let num = " " + i + " "
+
+
+                document.write(num.fontcolor("blue"))
+
+            } else if (i % 3 == 0) {
                 let num = " " + i + " "
                 document.write(num.fontcolor("red"))
             } else
@@ -27,7 +51,9 @@
                 document.write(num)
 
             }
-            i++
+
+            i++;
+
 
         }
     </script>
